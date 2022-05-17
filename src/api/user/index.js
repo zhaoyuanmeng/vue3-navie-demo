@@ -7,7 +7,6 @@ export function getUsers(data = {}) {
     data,
   })
 }
-
 export function getUser(id) {
   if (id) {
     return request({

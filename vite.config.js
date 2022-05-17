@@ -4,7 +4,6 @@ import path from 'path'
 import { wrapperEnv, createProxy } from './build/utils'
 import { createVitePlugins } from './build/plugin'
 import { OUTPUT_DIR } from './build/constant'
-
 export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
   const isBuild = command === 'build'

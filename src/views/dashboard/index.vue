@@ -4,7 +4,8 @@
       <div flex items-center>
         <img width="60" style="border-radius: 50%" :src="userStore.avatar" />
         <div ml20>
-          <p text-16>Hello, {{ userStore.name }}</p>
+          <!-- <p text-16>Hello, {{ userStore.name }}</p> -->
+          <p text-16>Hello, 赵元达</p>
           <p op80 text-12 mt5>今天又是元气满满的一天</p>
         </div>
         <div flex ml-auto>

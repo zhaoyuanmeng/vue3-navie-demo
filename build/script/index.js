@@ -13,4 +13,5 @@ export const runBuild = async () => {
   }
 }
 
+// 这里根本就没有执行
 runBuild()

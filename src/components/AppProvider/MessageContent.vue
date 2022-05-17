@@ -65,6 +65,7 @@ class Message {
 
 window['$message'] = new Message()
 
+// 这个方式创建全局的组件很好用
 Object.defineProperty(window, '$message', {
   configurable: false,
   writable: false,

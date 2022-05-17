@@ -9,12 +9,10 @@ export function setupInterceptor(service) {
       if (config.method === 'get') {
         config.params = { ...config.params, t: new Date().getTime() }
       }
-
       // 处理不需要token的请求
       if (isWithoutToken(config)) {
         return config
       }
-
       const token = getToken()
       if (token) {
         /**
@@ -22,7 +20,6 @@ export function setupInterceptor(service) {
          * ! 认证方案: Bearer
          */
         if (!config.headers.Authorization) config.headers.Authorization = 'Bearer ' + token
-
         return config
       }
       /**
