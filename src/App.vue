@@ -1,5 +1,6 @@
 <template>
   <AppProvider>
+    <!-- 下面是页面过渡的写法 官网的写法  -->
     <router-view v-slot="{ Component }">
       <component :is="Component" />
     </router-view>

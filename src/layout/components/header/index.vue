@@ -5,6 +5,7 @@
       <BreadCrumb ml-15 />
     </div>
     <div class="h-right">
+      <div>加个切换背景的</div>
       <FullScreen />
       <UserAvatar />
     </div>

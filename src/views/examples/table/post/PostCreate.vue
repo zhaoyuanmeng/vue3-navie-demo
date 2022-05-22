@@ -44,6 +44,7 @@ function handleSavePost(e) {
 <style lang="scss" scoped>
 .header {
   background-color: #fff;
+  background-color: rgb(8, 7, 7);
   height: 60px;
   padding: 0 20px;
   display: flex;

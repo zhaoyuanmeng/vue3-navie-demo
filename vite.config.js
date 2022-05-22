@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd())
   const viteEnv = wrapperEnv(env)
   const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv
-
+  console.log('-----------------', createProxy(VITE_PROXY), VITE_PORT)
   return {
     root,
     base: VITE_PUBLIC_PATH || '/',
@@ -33,6 +33,15 @@ export default defineConfig(({ command, mode }) => {
       host: '0.0.0.0',
       port: VITE_PORT,
       proxy: createProxy(VITE_PROXY),
+      // proxy: {
+      //   '/api-zyd': {
+      //     // target: 'http://video.zpkang.top:8080/', //老蒋的地址
+      //     // target: "http://127.0.0.1:4523/mock/930299/", //api/fox地址
+      //     target: 'http://video.zpkang.top:8080/', //api/fox地址
+      //     changeOrigin: true, //开启代理
+      //     rewrite: (path) => path.replace(/^\/api-zyd/, ''),
+      //   },
+      // },
     },
     build: {
       target: 'es2015',

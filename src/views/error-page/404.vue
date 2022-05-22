@@ -13,7 +13,16 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+
+import { loginPlus } from '@/api/auth'
+
+const test = async () => {
+  const res = await loginPlus()
+  console.log(res, '-------------------------')
+}
+
 const { replace } = useRouter()
+test()
 </script>
 
 <style lang="scss" scoped>

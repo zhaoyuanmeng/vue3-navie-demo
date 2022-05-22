@@ -123,7 +123,7 @@ function handleMouseWheel(e) {
 <style lang="scss">
 .tags-wrapper {
   display: flex;
-  background-color: #fff;
+  background-color: rgb(238, 232, 232);
   position: sticky;
   top: 0;
   z-index: 9;

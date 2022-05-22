@@ -41,7 +41,7 @@
 import { ref, unref } from 'vue'
 import { useRouter } from 'vue-router'
 
-import { login } from '@/api/auth'
+import { login, loginPlus } from '@/api/auth'
 import { createLocalStorage } from '@/utils/cache'
 import { setToken } from '@/utils/token'
 
@@ -68,9 +68,11 @@ async function handleLogin() {
     $message.warning('请输入用户名和密码')
     return
   }
+
   try {
     $message.loading('正在验证...')
     const res = await login({ name, password: password.toString() })
+    // const res = await loginPlus({ name, password: password.toString() })
     if (res.code === 0) {
       $message.success('登录成功')
       ls.set('loginInfo', { name, password })

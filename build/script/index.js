@@ -13,5 +13,5 @@ export const runBuild = async () => {
   }
 }
 
-// 这里根本就没有执行
+// 这里打包的时候运行了
 runBuild()

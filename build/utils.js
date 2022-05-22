@@ -37,7 +37,7 @@ export function createProxy(list = []) {
   const ret = {}
   for (const [prefix, target] of list) {
     const isHttps = httpsRE.test(target)
-
+    console.log('asdaadad----', prefix)
     // https://github.com/http-party/node-http-proxy#options
     ret[prefix] = {
       target: target,

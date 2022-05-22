@@ -41,7 +41,6 @@ export const basicRoutes = [
       title: '登录页',
     },
   },
-
   {
     name: 'Dashboard',
     path: '/',
@@ -126,7 +125,39 @@ export const basicRoutes = [
         component: () => import('@/views/test-page/keep-alive/index.vue'),
         meta: {
           title: '测试Keep-Alive',
-          keepAlive: true,
+          keepAlive: true, //建议名字同一 方便管理
+        },
+      },
+      {
+        name: 'computed',
+        path: 'computed',
+        component: () => import('@/views/test-page/computed/index.vue'),
+        meta: {
+          title: '测试computed',
+        },
+      },
+      {
+        name: 'watch',
+        path: 'watch',
+        component: () => import('@/views/test-page/watch/index.vue'),
+        meta: {
+          title: '测试watch',
+        },
+      },
+      {
+        name: 'watchEffect',
+        path: 'watchEffect',
+        component: () => import('@/views/test-page/watchEffect/index.vue'),
+        meta: {
+          title: 'watchEffect',
+        },
+      },
+      {
+        name: 'refs',
+        path: 'refs',
+        component: () => import('@/views/test-page/refs/index.vue'),
+        meta: {
+          title: 'refs',
         },
       },
     ],

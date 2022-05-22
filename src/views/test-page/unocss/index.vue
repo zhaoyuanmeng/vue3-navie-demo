@@ -63,7 +63,6 @@
           </div>
         </div>
       </div>
-
       <div flex ml-35 p-20 rounded-5 bg="#fff">
         <div text-20 font-600>字体：</div>
         <div ml-15 p-10 pl-30 pr-30 rounded-5>
@@ -76,7 +75,6 @@
           <p font-bold>font-weight: bold</p>
         </div>
       </div>
-
       <div flex p-20 ml-35 rounded-5 bg-white>
         <div text-20 font-600>颜色：</div>
         <div ml-15 p-10 pl-30 pr-30 rounded-5>
@@ -87,6 +85,7 @@
           <p bg="#2563eb" mt-10>background: #2563eb</p>
         </div>
       </div>
+      <div bg-current clear-left>1232</div>
     </div>
   </div>
 </template>
