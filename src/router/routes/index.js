@@ -168,6 +168,14 @@ export const basicRoutes = [
           title: 'slot',
         },
       },
+      {
+        name: 'grid',
+        path: 'grid',
+        component: () => import('@/views/test-page/grid/index.vue'),
+        meta: {
+          title: 'grid',
+        },
+      },
     ],
   },
 
