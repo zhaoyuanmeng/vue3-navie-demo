@@ -27,9 +27,11 @@ import { unocss } from './unocss'
 import { configHtmlPlugin } from './html'
 import { configMockPlugin } from './mock'
 
+import vuejsx from '@vue/babel-plugin-jsx'
 export function createVitePlugins(viteEnv, isBuild) {
   const plugins = [
     vue(),
+    vuejsx({}), //新加的jsx
     VueSetupExtend(),
     Components({
       resolvers: [NaiveUiResolver()],

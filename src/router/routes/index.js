@@ -176,6 +176,22 @@ export const basicRoutes = [
           title: 'grid',
         },
       },
+      {
+        name: 'provide',
+        path: 'provide',
+        component: () => import('@/views/test-page/provide/index.vue'),
+        meta: {
+          title: 'provide',
+        },
+      },
+      {
+        name: 'jsx',
+        path: 'jsx',
+        component: () => import('@/views/test-page/jsx/index.jsx'),
+        meta: {
+          title: 'jsx',
+        },
+      },
     ],
   },
 
