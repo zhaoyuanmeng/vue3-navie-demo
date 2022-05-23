@@ -160,6 +160,14 @@ export const basicRoutes = [
           title: 'refs',
         },
       },
+      {
+        name: 'slot',
+        path: 'slot',
+        component: () => import('@/views/test-page/slot/index.vue'),
+        meta: {
+          title: 'slot',
+        },
+      },
     ],
   },
 
