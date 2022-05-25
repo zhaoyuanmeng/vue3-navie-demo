@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <h1>provide注入的使用</h1>
+    <h1 text-green-500>provide注入的使用</h1>
     <testVue></testVue>
     <h1>state的数据{{ state.name }}</h1>
   </div>
