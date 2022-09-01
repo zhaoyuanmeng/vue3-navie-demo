@@ -74,3 +74,31 @@ export function debounce(method, wait, immediate) {
     }
   }
 }
+
+/**
+ * @author Zhao YuanDa
+ * @parms: data源数据 parentId 默认开始为0
+ * @description: //一维数组转树
+ * @date 2022-09-01 16:26
+ */
+
+export function useArrayToTree(data, parentId) {
+  let tree = []
+  let temp = []
+
+  for (let i = 0; i < data.length; i++){
+
+    if (data[i].parentId = parentId) {
+      let child = data[i]
+      // 继续递归的找
+      temp = useArrayToTree(data, child.id)
+      
+      if (temp.length > 0) {
+        child.children = temp
+      }
+      tree.push(child)
+    }
+
+  }
+  return tree
+}
