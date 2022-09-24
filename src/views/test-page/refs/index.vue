@@ -1,16 +1,23 @@
 <template lang="">
   <div>
     <h1>Refs的使用</h1>
+    <h1>test:{{ test }}</h1>
+    <h1>usetest:{{ usetest.data }}</h1>
+    <button @click="btn">改变test里面的ref值</button>
+    <button @click="useBtn">改变usetest里面的ref值</button>
   </div>
 </template>
 <script setup>
 import { ref, reactive, toRef, toRefs } from 'vue'
+import { test } from '@/store/test/index'
 
+import { useTestStore } from '@/store/modules/test'
 // ===================== toRef ============== //
 const state = reactive({
   foo: 1,
   bar: 2,
 })
+const usetest = useTestStore()
 let { foo, bar } = state
 foo = toRef(state, 'foo')
 state.foo = 22
@@ -55,5 +62,12 @@ console.log('a', a.value)
 console.log('b', b.value)
 console.log('state1', state1)
 console.log('state2', state2)
+
+const btn = () => {
+  test.value = 'zyd-test'
+}
+const useBtn = () => {
+  usetest.setData('aaaa')
+}
 </script>
 <style lang=""></style>
